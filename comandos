@@ -1,0 +1,3 @@
+npm start
+npx react-native init nome_projeto
+npx react-native run-android
