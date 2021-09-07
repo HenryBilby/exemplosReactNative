@@ -1,3 +1,10 @@
 npm start
 npx react-native init nome_projeto
 npx react-native run-android
+
+//Lib que formata o input de texto para numero de telefone, cartão de credito, cpf e outros
+npm i react-native-masked-text
+
+//Lib que persiste os dados coletados da interface
+// https://react-native-async-storage.github.io/async-storage/docs/install/
+npm install @react-native-async-storage/async-storage
