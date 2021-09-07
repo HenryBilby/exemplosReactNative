@@ -34,6 +34,7 @@ const App = () => {
     }
     setVisible(!visible);
     setResultado('');
+    setvisibleLabelResult(false);
   };
 
   return (
