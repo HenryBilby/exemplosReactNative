@@ -29,3 +29,6 @@ npm install @react-navigation/drawer
 
 //A lib drawer depende das libs abaixo, por isso devemos instalá-las:
 npm install react-native-gesture-handler react-native-reanimated
+
+//Lib que permite a navegação de telas por tabs
+npm install @react-navigation/bottom-tabs
