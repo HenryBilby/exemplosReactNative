@@ -24,7 +24,7 @@ npm install @react-navigation/stack
 npm install react-native-gesture-handler
 
 //https://reactnavigation.org/docs/drawer-navigator
-//Lib que criar um menu de navegação na lateral esquerda
+//Lib que cria um menu de navegação na lateral esquerda
 npm install @react-navigation/drawer
 
 //A lib drawer depende das libs abaixo, por isso devemos instalá-las:
@@ -32,3 +32,5 @@ npm install react-native-gesture-handler react-native-reanimated
 
 //Lib que permite a navegação de telas por tabs
 npm install @react-navigation/bottom-tabs
+
+// https://www.npmjs.com/ - Repositório com as principais libs para react-native
