@@ -4,22 +4,20 @@ import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 const FlatComponent = ({data}) => {
+  const navigation = useNavigation();
 
-    const navigation = useNavigation();
-
-    //Esta func passa os parÂmetros nomeDigitado e age, para a Tela2
-    const chamaTela2 = () => {
-      navigation.navigate('Tela2', {data: data});
-    };
-
-
+  //Esta func passa os parÂmetros nomeDigitado e age, para a Tela2
+  const chamaTela2 = () => {
+    navigation.navigate('Tela2', {data: data});
+  };
 
   return (
     <TouchableOpacity style={styles.container} onPress={chamaTela2}>
       <Image
         resizeMode="contain"
         source={{uri: data.image}}
-        style={{width: 100, height: 100}}/>
+        style={{width: 100, height: 100}}
+      />
 
       <View style={styles.subContainer}>
         <Text style={styles.tituloTopo}>{data.filme}</Text>

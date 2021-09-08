@@ -11,6 +11,7 @@ const Tela1 = () => {
       ano: 2020,
       estilo: 'Comédia',
       direcao: 'Tony Cervone',
+      searchUrl: 'https://www.google.com/search?q=scooby-doo+o+filme',
       image:
         'https://br.web.img3.acsta.net/pictures/20/03/05/20/58/4942195.jpg',
       descricao:
@@ -23,6 +24,7 @@ const Tela1 = () => {
       ano: 2021,
       estilo: 'Drama',
       direcao: 'Jacek Borcuch',
+      searchUrl: 'https://www.google.com/search?q=doce+entardecer+o+filme',
       image:
         'https://br.web.img3.acsta.net/pictures/19/12/11/19/47/1467591.jpg',
       descricao:
