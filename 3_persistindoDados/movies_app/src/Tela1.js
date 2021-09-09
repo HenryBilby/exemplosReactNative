@@ -32,12 +32,6 @@ const Tela1 = () => {
     },
   ];
 
-  const styles = StyleSheet.create({
-    input: {
-      borderWidth: 1,
-    },
-  });
-
   return (
     <View>
       <FlatList

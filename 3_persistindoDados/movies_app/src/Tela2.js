@@ -57,7 +57,7 @@ async function openLink(url) {
 
 const Tela2 = () => {
   const route = useRoute();
-  const data = route.params.data;
+  const {data} = route.params;
 
   return (
     <View style={styles.container}>
