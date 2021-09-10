@@ -53,7 +53,6 @@ const Home = () => {
   };
 
   const deleteUser = id => {
-    console.log('Call deleteUser with id: ' + id);
     axios
       .delete('http://10.0.2.2:3000/users/' + id)
       .then(res => {

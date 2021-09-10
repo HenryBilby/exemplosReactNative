@@ -34,3 +34,7 @@ npm install react-native-gesture-handler react-native-reanimated
 npm install @react-navigation/bottom-tabs
 
 // https://www.npmjs.com/ - Repositório com as principais libs para react-native
+
+//Lib para realizar requisições http em uma API restfull
+npm install axios
+
