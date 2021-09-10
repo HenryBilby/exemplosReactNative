@@ -1,0 +1,20 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "titulo": "Celular",
+      "categoria": "Eletrônico",
+      "modelo": "X10",
+      "quantidade": 11,
+      "img": "https://images.kabum.com.br/produtos/fotos/94717/94717_1522164025_g.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Televisão",
+      "categoria": "Eletrônico",
+      "modelo": "Samsung samy",
+      "quantidade": 125,
+      "img": "https://i.zst.com.br/thumbs/12/36/2c/1094084101.jpg"
+    }
+  ]
+}
