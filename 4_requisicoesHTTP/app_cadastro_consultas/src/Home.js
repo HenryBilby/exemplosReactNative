@@ -15,6 +15,8 @@ const Home = () => {
   const url_base = 'http://10.0.2.2:3000/consulta/';
   const [consultas, setConsultas] = useState([]);
 
+  const route = useRoute();
+
   useEffect(() => {
     Axios.get(url_base)
       .then(res => {
@@ -23,7 +25,7 @@ const Home = () => {
       .catch(error => {
         console.error('GET - Erro ao recuperar as consultas. ' + error);
       });
-  }, []);
+  }, [route.params?.res]);
 
   const navigation = useNavigation();
 
@@ -46,7 +48,7 @@ const Home = () => {
           <TouchableOpacity
             style={styles.touchFlatList}
             onPress={() => {
-              navigation.navigate('Editar');
+              navigation.navigate('Editar', {consulta: item});
             }}>
             <Text style={styles.dataTouchFlatList}>{item.data}</Text>
             <View style={styles.viewTouchFlatList}>

@@ -6,7 +6,12 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
+
+import {TextInputMask} from 'react-native-masked-text';
+
 import {useNavigation} from '@react-navigation/native';
+
+import Axios from 'axios';
 
 const Cadastra = () => {
   const navigation = useNavigation();
@@ -15,6 +20,29 @@ const Cadastra = () => {
   const [hora, setHora] = useState('');
   const [medico, setMedico] = useState('');
   const [paciente, setPaciente] = useState('');
+
+  const url_base = 'http://10.0.2.2:3000/consulta/';
+
+  const cadastrar = () => {
+    if (!data || !hora || !medico || !paciente) {
+      alert('Todos os parâmetros devem ser preenchidos!');
+    } else {
+      Axios.post(url_base, {
+        data: data,
+        hora: hora,
+        medico: medico,
+        paciente: paciente,
+      })
+        .then(res => {
+          alert('Consulta salva com sucesso!');
+          navigation.navigate('Home', {res});
+        })
+        .catch(error => {
+          alert('Erro ao salvar a consulta.');
+          console.error('POST - Erro ao salvar a consulta.' + error);
+        });
+    }
+  };
 
   return (
     <View style={styles.viewMain}>
@@ -36,25 +64,29 @@ const Cadastra = () => {
           style={styles.textInput}
           placeholderTextColor="green"
         />
-        <TextInput
+        <TextInputMask
+          type={'datetime'}
+          options={{
+            format: 'DD/MM/YY',
+          }}
           value={data}
           onChangeText={txt => setData(txt)}
           placeholder="Informe a data da consulta"
           style={styles.textInput}
           placeholderTextColor="green"
         />
-        <TextInput
+        <TextInputMask
+          type={'datetime'}
+          options={{
+            format: 'HH:mm',
+          }}
           value={hora}
           onChangeText={txt => setHora(txt)}
           placeholder="Informe a hora da consulta"
           style={styles.textInput}
           placeholderTextColor="green"
         />
-        <TouchableOpacity
-          style={styles.touch}
-          onPress={() => {
-            navigation.navigate('Home');
-          }}>
+        <TouchableOpacity style={styles.touch} onPress={cadastrar}>
           <Text style={styles.textTouch}> Salvar </Text>
         </TouchableOpacity>
       </View>
